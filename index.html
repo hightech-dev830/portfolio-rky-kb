@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kevin Burgess — Senior AI & Full-Stack Software Engineer</title>
+  <meta name="description" content="Kevin Burgess is a Senior AI & Full-Stack Software Engineer building LLM-powered products, RAG systems, document intelligence and secure, production-grade SaaS platforms." />
+  <meta property="og:title" content="Kevin Burgess — Senior AI & Full-Stack Software Engineer" />
+  <meta property="og:description" content="LLM integration, AI agents, RAG, document intelligence and full-stack engineering with Python, Go, Rust and TypeScript." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/kevin-portrait.jpg" />
+  <meta name="theme-color" content="#c81e3a" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%23c81e3a'/><text x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='800' font-size='30' fill='white'>KB</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Set theme before paint to avoid a flash
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+      } catch (e) { document.documentElement.dataset.theme = 'light'; }
+    })();
+  </script>
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a href="#top" class="logo" aria-label="Kevin Burgess, back to top">
+        <span class="logo-mark">KB</span>
+        <span class="logo-text">Kevin Burgess</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#how-i-build">How I Build</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><g><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></g></svg>
+          <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="icon-btn menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="blob blob-1"></span>
+        <span class="blob blob-2"></span>
+        <span class="blob blob-3"></span>
+      </div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <img class="eyebrow-avatar" src="assets/kevin-avatar.jpg" alt="" width="44" height="44" />
+            <span><span class="wave" aria-hidden="true">👋</span> Hi, I'm Kevin</span>
+          </p>
+          <h1 class="hero-title">
+            I build <span class="sparkle-text" data-sparkle>AI-powered</span> software that's
+            <span class="rotator" aria-live="polite"><span class="rotator-word">secure</span></span>
+          </h1>
+          <p class="hero-sub">
+            Senior AI &amp; Full-Stack Software Engineer with 11+ years shipping enterprise SaaS,
+            data-heavy platforms and LLM-powered workflows using Python, Go, Rust, TypeScript and React.
+          </p>
+          <div class="hero-cta">
+            <a href="#experience" class="btn btn-primary">See my work <span aria-hidden="true">→</span></a>
+            <a href="#contact" class="btn btn-ghost">Get in touch</a>
+          </div>
+          <ul class="hero-meta">
+            <li><span class="dot dot-green" aria-hidden="true"></span>Open to new opportunities</li>
+            <li>📍 Rolling Hills, CA</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <div class="console" role="img" aria-label="Animated demo of an AI agent answering questions about Kevin with retrieved citations">
+            <div class="console-bar">
+              <span class="c-dot r"></span><span class="c-dot y"></span><span class="c-dot g"></span>
+              <span class="console-title">ask-the-agent · streaming via SSE</span>
+            </div>
+            <div class="console-body" id="console-body">
+              <div class="console-line prompt"><span class="caret">›</span> <span id="console-q"></span><span class="cursor" id="console-cursor"></span></div>
+              <div class="console-status" id="console-status"></div>
+              <div class="console-answer" id="console-a"></div>
+              <div class="console-cites" id="console-cites"></div>
+            </div>
+          </div>
+          <div class="float-badge badge-1">⚡ Go · Rust · Python</div>
+          <div class="float-badge badge-2">🧠 LLMs · RAG · MCP</div>
+          <div class="float-badge badge-3">🔐 Tenant-aware by default</div>
+        </div>
+      </div>
+
+      <div class="stats container" aria-label="Career highlights">
+        <div class="stat"><span class="stat-num" data-count="11">0</span><span class="stat-plus">+</span><span class="stat-label">years shipping software</span></div>
+        <div class="stat"><span class="stat-num" data-count="4">0</span><span class="stat-label">industries: legal, gov, fintech, edtech</span></div>
+        <div class="stat"><span class="stat-num" data-count="60">0</span><span class="stat-plus">+</span><span class="stat-label">fields extracted per document by OCR + validation</span></div>
+        <div class="stat"><span class="stat-num" data-count="7">0</span><span class="stat-label">programming languages in production</span></div>
+      </div>
+    </section>
+
+    <svg class="divider" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z"/></svg>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section section-alt" id="about">
+      <div class="container about-grid">
+        <div class="reveal">
+          <p class="section-kicker">About me</p>
+          <h2 class="section-title">Turning large language models into <em>trustworthy</em> business tools</h2>
+          <figure class="portrait">
+            <div class="portrait-frame">
+              <img src="assets/kevin-portrait.jpg" alt="Portrait of Kevin Burgess in a navy blazer" width="640" height="800" loading="lazy" />
+            </div>
+            <figcaption class="portrait-sticker">That's me! <span aria-hidden="true">👋</span></figcaption>
+          </figure>
+        </div>
+        <div class="about-copy reveal">
+          <p>
+            I'm a senior engineer who works across the whole stack, from Postgres schemas and Go services
+            to React interfaces. For the last several years I've focused on bringing LLMs into real business
+            workflows: <strong>AI agents</strong>, <strong>retrieval-augmented generation</strong>,
+            <strong>document intelligence</strong>, semantic search and structured data extraction.
+          </p>
+          <p>
+            I've built these systems for law firms, government contractors and financial platforms, where a
+            wrong answer or a leaked record has real consequences. So I care a lot about the unglamorous parts:
+            <mark>secure data access, tenant isolation, validation, observability</mark> and architecture that
+            the next engineer can actually maintain.
+          </p>
+          <div class="principles">
+            <div class="principle">
+              <span class="principle-icon">🛡️</span>
+              <div><h3>Secure by design</h3><p>Permission-aware retrieval, RBAC, scoped API keys and PII scrubbing are built in from the start, not added later.</p></div>
+            </div>
+            <div class="principle">
+              <span class="principle-icon">✅</span>
+              <div><h3>Validated outputs</h3><p>LLM output goes through Pydantic schemas, guardrails and tests before anything downstream relies on it.</p></div>
+            </div>
+            <div class="principle">
+              <span class="principle-icon">🔭</span>
+              <div><h3>Observable systems</h3><p>Monitoring, background-job visibility and clear error handling so production issues get found and fixed fast.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <svg class="divider divider-flip" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z"/></svg>
+
+    <!-- ============ HOW I BUILD (interactive pipeline) ============ -->
+    <section class="section" id="how-i-build">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">Interactive explainer</p>
+          <h2 class="section-title">How a document becomes an answer</h2>
+          <p class="section-lead">
+            Here's the AI document pipeline I've built in different forms for legal and government clients.
+            Click a stage, or press play, to follow one document from upload to cited answer.
+          </p>
+        </div>
+
+        <div class="pipeline reveal" id="pipeline">
+          <div class="pipeline-track" role="tablist" aria-label="Pipeline stages">
+            <button class="stage is-active" role="tab" aria-selected="true" data-stage="0"><span class="stage-icon">📥</span><span class="stage-name">Ingest</span></button>
+            <button class="stage" role="tab" aria-selected="false" data-stage="1"><span class="stage-icon">🔍</span><span class="stage-name">OCR</span></button>
+            <button class="stage" role="tab" aria-selected="false" data-stage="2"><span class="stage-icon">🧾</span><span class="stage-name">Validate</span></button>
+            <button class="stage" role="tab" aria-selected="false" data-stage="3"><span class="stage-icon">🧬</span><span class="stage-name">Embed</span></button>
+            <button class="stage" role="tab" aria-selected="false" data-stage="4"><span class="stage-icon">🔐</span><span class="stage-name">Retrieve</span></button>
+            <button class="stage" role="tab" aria-selected="false" data-stage="5"><span class="stage-icon">💬</span><span class="stage-name">Answer</span></button>
+            <div class="pipeline-progress" aria-hidden="true"><span></span></div>
+          </div>
+
+          <div class="pipeline-panel" role="tabpanel" aria-live="polite">
+            <div class="panel-text">
+              <p class="panel-step" id="panel-step">Stage 1 of 6</p>
+              <h3 id="panel-title">Ingest</h3>
+              <p id="panel-desc"></p>
+              <ul class="panel-tags" id="panel-tags"></ul>
+            </div>
+            <pre class="panel-code"><code id="panel-code"></code></pre>
+          </div>
+
+          <div class="pipeline-controls">
+            <button class="btn btn-small btn-ghost" id="pipe-prev" aria-label="Previous stage">← Prev</button>
+            <button class="btn btn-small btn-primary" id="pipe-play">▶ Play</button>
+            <button class="btn btn-small btn-ghost" id="pipe-next" aria-label="Next stage">Next →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section section-alt" id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">Experience</p>
+          <h2 class="section-title">Where I've been building</h2>
+          <p class="section-lead">More than a decade across legal tech, government data, fintech and e-learning.</p>
+        </div>
+
+        <div class="exp reveal">
+          <div class="exp-tabs" role="tablist" aria-label="Employers" id="exp-tabs">
+            <button role="tab" class="exp-tab is-active" aria-selected="true" aria-controls="job-0" id="tab-0">
+              <span class="exp-tab-co">Jaburg &amp; Wilk</span><span class="exp-tab-date">2024 – 2026</span>
+            </button>
+            <button role="tab" class="exp-tab" aria-selected="false" aria-controls="job-1" id="tab-1" tabindex="-1">
+              <span class="exp-tab-co">rTurner Consulting</span><span class="exp-tab-date">2022 – 2024</span>
+            </button>
+            <button role="tab" class="exp-tab" aria-selected="false" aria-controls="job-2" id="tab-2" tabindex="-1">
+              <span class="exp-tab-co">Internet Financial</span><span class="exp-tab-date">2020 – 2022</span>
+            </button>
+            <button role="tab" class="exp-tab" aria-selected="false" aria-controls="job-3" id="tab-3" tabindex="-1">
+              <span class="exp-tab-co">Asteria Learning</span><span class="exp-tab-date">2015 – 2020</span>
+            </button>
+            <span class="exp-indicator" aria-hidden="true"></span>
+          </div>
+
+          <div class="exp-panels">
+            <!-- Job 0 -->
+            <article class="exp-panel is-active" role="tabpanel" id="job-0" aria-labelledby="tab-0">
+              <header class="exp-head">
+                <div>
+                  <h3>Senior Software Engineer <span class="at">@ Jaburg &amp; Wilk, P.C.</span></h3>
+                  <p class="exp-sub">Law Firm Case Management System · Phoenix, AZ</p>
+                </div>
+                <span class="exp-date">Apr 2024 – Aug 2026</span>
+              </header>
+              <p class="exp-summary">Built a legal case-management platform for matters, clients, documents, deadlines, communications and AI-assisted workflows.</p>
+              <div class="highlight-cards">
+                <div class="hcard"><span>🤖</span><p>Built an <strong>"Ask the Agent"</strong> experience on Claude and self-hosted Qwen (vLLM + Ollama), with streamed responses over SSE</p></div>
+                <div class="hcard"><span>📄</span><p>Built <strong>OCR document intake</strong> with Mistral OCR and GLM-OCR, using Pydantic validation across about 60 extracted fields</p></div>
+                <div class="hcard"><span>🔐</span><p>Implemented <strong>tenant-aware access</strong>, scoped API keys, RBAC and permission-aware Pinecone search</p></div>
+              </div>
+              <ul class="exp-list">
+                <li>Developed backend services in Go, Python and PostgreSQL for matter management, document relationships, task workflows, activity history and integrations.</li>
+                <li>Created scheduled Apache Airflow syncs for matters, clients, deadlines, email records and document metadata from connected systems, including iManage.</li>
+                <li>Added AI safeguards: PII scrubbing, structured-output validation, legal deadline-processing logic, automated tests and CI/CD security scanning.</li>
+              </ul>
+              <ul class="chips">
+                <li>Go</li><li>Python</li><li>PostgreSQL</li><li>React</li><li>TypeScript</li><li>Claude</li><li>Qwen</li><li>vLLM</li><li>Ollama</li><li>MCP</li><li>RAG</li><li>Pinecone</li><li>Mistral OCR</li><li>GLM-OCR</li><li>Pydantic</li><li>Airflow</li><li>SSE</li><li>Docker</li><li>Kubernetes</li>
+              </ul>
+            </article>
+
+            <!-- Job 1 -->
+            <article class="exp-panel" role="tabpanel" id="job-1" aria-labelledby="tab-1" hidden>
+              <header class="exp-head">
+                <div>
+                  <h3>Senior Software Engineer <span class="at">@ rTurner Consulting, LLC</span></h3>
+                  <p class="exp-sub">Government Data Management · Taylorsville, KY</p>
+                </div>
+                <span class="exp-date">Apr 2022 – Mar 2024</span>
+              </header>
+              <p class="exp-summary">Built software for government contracting and procurement, including solicitation discovery, document processing, AI-assisted research and RFQ preparation.</p>
+              <div class="highlight-cards">
+                <div class="hcard"><span>🏛️</span><p>Integrated <strong>SAM.gov and HigherGov</strong> data sources to collect, normalize and organize solicitations</p></div>
+                <div class="hcard"><span>📚</span><p>Built <strong>RAG workflows with citations</strong> for procurement research using Pinecone and SQL Server</p></div>
+                <div class="hcard"><span>🦀</span><p>Developed <strong>Rust services</strong> with Axum and Tokio for APIs and concurrent workloads</p></div>
+              </div>
+              <ul class="exp-list">
+                <li>Built backend services and async workflows with Python, Celery and Redis for procurement ingestion, background jobs and document processing.</li>
+                <li>Implemented Tesseract OCR and document parsing to turn procurement documents into searchable structured data.</li>
+                <li>Implemented AI-assisted RFQ drafting from retrieved solicitation context and evaluated self-hosted Qwen models through Ollama.</li>
+                <li>Added validation, error handling and background-job monitoring to make services easier to maintain.</li>
+              </ul>
+              <ul class="chips">
+                <li>Python</li><li>Rust</li><li>Axum</li><li>Tokio</li><li>Celery</li><li>Redis</li><li>SQL Server</li><li>Pinecone</li><li>RAG</li><li>Qwen</li><li>Ollama</li><li>Tesseract OCR</li><li>REST APIs</li><li>ETL</li>
+              </ul>
+            </article>
+
+            <!-- Job 2 -->
+            <article class="exp-panel" role="tabpanel" id="job-2" aria-labelledby="tab-2" hidden>
+              <header class="exp-head">
+                <div>
+                  <h3>Software Engineer <span class="at">@ Internet Financial Pov. LLC</span></h3>
+                  <p class="exp-sub">Financial Software Platform · Boston, MA</p>
+                </div>
+                <span class="exp-date">Aug 2020 – Jul 2022</span>
+              </header>
+              <p class="exp-summary">Built web features and backend services for financial workflows, account management, third-party integrations, notifications and reporting.</p>
+              <div class="highlight-cards">
+                <div class="hcard"><span>⚛️</span><p>Built <strong>interactive React + Redux</strong> features with reusable components and predictable state</p></div>
+                <div class="hcard"><span>💳</span><p>Integrated <strong>Stripe, Twilio and SendGrid</strong> for payments and transactional messages</p></div>
+                <div class="hcard"><span>🔑</span><p>Implemented <strong>JWT, OAuth 2.0</strong> and role-based access control</p></div>
+              </div>
+              <ul class="exp-list">
+                <li>Built backend APIs with Django REST Framework and Node.js/Express connecting frontend workflows to business logic.</li>
+                <li>Designed PostgreSQL schemas and queries, and implemented background tasks using Celery and Redis.</li>
+                <li>Created scheduled ETL and data-processing jobs with Apache Airflow for synchronization and reporting.</li>
+                <li>Containerized services with Docker and supported deployments with Nginx and GitHub Actions.</li>
+              </ul>
+              <ul class="chips">
+                <li>React</li><li>TypeScript</li><li>Redux</li><li>Python</li><li>Django REST</li><li>Node.js</li><li>Express</li><li>PostgreSQL</li><li>Redis</li><li>Celery</li><li>Airflow</li><li>Stripe</li><li>Twilio</li><li>SendGrid</li><li>Docker</li><li>Nginx</li><li>GitHub Actions</li>
+              </ul>
+            </article>
+
+            <!-- Job 3 -->
+            <article class="exp-panel" role="tabpanel" id="job-3" aria-labelledby="tab-3" hidden>
+              <header class="exp-head">
+                <div>
+                  <h3>Full-Stack Software Engineer <span class="at">@ Asteria Learning, Inc.</span></h3>
+                  <p class="exp-sub">Learning Management Platform · Tampa, FL</p>
+                </div>
+                <span class="exp-date">Apr 2015 – Aug 2020</span>
+              </header>
+              <p class="exp-summary">Built web-based learning and business applications for user management, scheduling, billing, notifications, administration and reporting.</p>
+              <div class="highlight-cards">
+                <div class="hcard"><span>🐍</span><p>Built <strong>Python backends</strong> with Django and Flask, covering business logic, models and APIs</p></div>
+                <div class="hcard"><span>📊</span><p>Created <strong>dashboards and reporting</strong> interfaces for administrative users</p></div>
+                <div class="hcard"><span>☁️</span><p>Supported <strong>AWS deployments</strong> (EC2, S3, RDS) and Heroku hosting</p></div>
+              </div>
+              <ul class="exp-list">
+                <li>Developed frontends with AngularJS and React, with supporting services in Node.js and Express.</li>
+                <li>Designed and maintained PostgreSQL, MySQL and MongoDB schemas for transactional and document-oriented data.</li>
+                <li>Implemented scheduling, billing, notification and user-management features for administrative workflows.</li>
+                <li>Wrote automated tests with pytest and Jest, and worked with stakeholders to turn requirements into maintainable features.</li>
+              </ul>
+              <ul class="chips">
+                <li>Python</li><li>Django</li><li>Flask</li><li>JavaScript</li><li>AngularJS</li><li>React</li><li>Node.js</li><li>Express</li><li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>pytest</li><li>Jest</li><li>AWS</li><li>Heroku</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">Toolbox</p>
+          <h2 class="section-title">Skills &amp; technologies</h2>
+          <p class="section-lead">Filter by area. Each tool here has been used in production.</p>
+        </div>
+
+        <div class="skill-filters reveal" role="group" aria-label="Filter skills" id="skill-filters">
+          <button class="filter is-active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter" data-filter="lang" aria-pressed="false">Languages</button>
+          <button class="filter" data-filter="backend" aria-pressed="false">Backend</button>
+          <button class="filter" data-filter="frontend" aria-pressed="false">Frontend</button>
+          <button class="filter" data-filter="data" aria-pressed="false">Data</button>
+          <button class="filter" data-filter="ai" aria-pressed="false">AI / ML</button>
+          <button class="filter" data-filter="cloud" aria-pressed="false">Cloud &amp; DevOps</button>
+        </div>
+
+        <div class="skill-grid reveal" id="skill-grid">
+          <div class="skill-card" data-cat="lang">
+            <div class="skill-card-head"><span class="skill-emoji">💻</span><h3>Languages</h3></div>
+            <ul class="chips"><li>Python</li><li>Go</li><li>Rust</li><li>TypeScript</li><li>JavaScript</li><li>C#</li><li>SQL</li><li>Bash</li></ul>
+          </div>
+          <div class="skill-card" data-cat="backend">
+            <div class="skill-card-head"><span class="skill-emoji">⚙️</span><h3>Backend &amp; APIs</h3></div>
+            <ul class="chips"><li>Django</li><li>Django REST</li><li>FastAPI</li><li>Flask</li><li>Node.js</li><li>Express</li><li>Axum</li><li>Tokio</li><li>REST APIs</li><li>Microservices</li><li>Async processing</li><li>SSE</li><li>OAuth 2.0</li><li>JWT</li><li>RBAC</li><li>Multi-tenant architecture</li></ul>
+          </div>
+          <div class="skill-card" data-cat="frontend">
+            <div class="skill-card-head"><span class="skill-emoji">🎨</span><h3>Frontend</h3></div>
+            <ul class="chips"><li>React</li><li>TypeScript</li><li>Redux</li><li>Angular</li><li>AngularJS</li><li>HTML5</li><li>CSS3</li><li>Sass</li><li>Bootstrap</li><li>Responsive UI</li><li>Component architecture</li><li>Real-time updates</li></ul>
+          </div>
+          <div class="skill-card" data-cat="data">
+            <div class="skill-card-head"><span class="skill-emoji">🗄️</span><h3>Databases &amp; Search</h3></div>
+            <ul class="chips"><li>PostgreSQL</li><li>SQL Server</li><li>MySQL</li><li>MongoDB</li><li>Redis</li><li>Pinecone</li><li>Vector search</li><li>Semantic retrieval</li><li>Schema design</li><li>Query optimization</li></ul>
+          </div>
+          <div class="skill-card" data-cat="data">
+            <div class="skill-card-head"><span class="skill-emoji">🔄</span><h3>Data Engineering</h3></div>
+            <ul class="chips"><li>Apache Airflow</li><li>Celery</li><li>ETL / ELT</li><li>Data ingestion</li><li>Normalization</li><li>OCR processing</li><li>Document parsing</li><li>Structured extraction</li><li>Pandas</li><li>Data-quality checks</li></ul>
+          </div>
+          <div class="skill-card" data-cat="ai">
+            <div class="skill-card-head"><span class="skill-emoji">🧠</span><h3>AI &amp; ML Integration</h3></div>
+            <ul class="chips"><li>LLMs</li><li>AI agents</li><li>Tool calling</li><li>MCP</li><li>RAG</li><li>Embeddings</li><li>Vector databases</li><li>Permission-aware retrieval</li><li>Claude</li><li>GPT-4o</li><li>Qwen</li><li>vLLM</li><li>Ollama</li><li>Mistral OCR</li><li>GLM-OCR</li><li>Tesseract</li><li>Pydantic</li><li>Structured outputs</li><li>Prompt design</li><li>AI guardrails</li><li>PII protection</li></ul>
+          </div>
+          <div class="skill-card" data-cat="cloud">
+            <div class="skill-card-head"><span class="skill-emoji">☁️</span><h3>Cloud, DevOps &amp; Quality</h3></div>
+            <ul class="chips"><li>AWS EC2</li><li>S3</li><li>RDS</li><li>EKS</li><li>Azure</li><li>Azure SQL</li><li>Blob Storage</li><li>Entra ID</li><li>Docker</li><li>Kubernetes</li><li>Nginx</li><li>GitHub Actions</li><li>CI/CD</li><li>pytest</li><li>Jest</li><li>Security scanning</li><li>Monitoring</li><li>Git</li></ul>
+          </div>
+        </div>
+
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee-track">
+            <span>Python</span><span>Go</span><span>Rust</span><span>TypeScript</span><span>React</span><span>PostgreSQL</span><span>Claude</span><span>RAG</span><span>MCP</span><span>Pinecone</span><span>Airflow</span><span>Kubernetes</span><span>FastAPI</span><span>Django</span><span>vLLM</span><span>Docker</span>
+            <span>Python</span><span>Go</span><span>Rust</span><span>TypeScript</span><span>React</span><span>PostgreSQL</span><span>Claude</span><span>RAG</span><span>MCP</span><span>Pinecone</span><span>Airflow</span><span>Kubernetes</span><span>FastAPI</span><span>Django</span><span>vLLM</span><span>Docker</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section class="section section-alt section-tight">
+      <div class="container edu-grid">
+        <div class="edu-card reveal">
+          <span class="edu-icon">🎓</span>
+          <div>
+            <p class="section-kicker">Education</p>
+            <h3>Bachelor's Degree, Computer Science</h3>
+            <p>California State University, Dominguez Hills · 2000 – 2004</p>
+          </div>
+        </div>
+        <div class="edu-card reveal">
+          <span class="edu-icon">🗣️</span>
+          <div>
+            <p class="section-kicker">Languages</p>
+            <h3>English</h3>
+            <p>Native</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="contact-card reveal">
+          <p class="section-kicker">Contact</p>
+          <h2 class="section-title">Let's build something <span class="sparkle-text" data-sparkle>great</span> together</h2>
+          <p class="section-lead">
+            I'm interested in senior engineering roles and projects involving AI products, data-heavy platforms or secure SaaS.
+            The fastest way to reach me is email.
+          </p>
+          <div class="contact-actions">
+            <button class="btn btn-primary btn-lg copy-email" id="copy-email" data-email="kevinburgess219000@gmail.com">
+              <span class="copy-label">📋 Copy email</span>
+            </button>
+            <a class="btn btn-ghost btn-lg" href="mailto:kevinburgess219000@gmail.com">✉️ Send email</a>
+          </div>
+          <ul class="contact-list">
+            <li><a href="mailto:kevinburgess219000@gmail.com"><span>✉️</span>kevinburgess219000@gmail.com</a></li>
+            <li><a href="tel:+13109813618"><span>📞</span>(310) 981-3618</a></li>
+            <li><a href="https://www.linkedin.com/in/kevin-burgess-357505446" target="_blank" rel="noopener noreferrer"><span>💼</span>linkedin.com/in/kevin-burgess-357505446</a></li>
+            <li><span class="no-link"><span>📍</span>Rolling Hills, CA</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Kevin Burgess. Built from scratch with HTML, CSS &amp; a little JavaScript.</p>
+      <a href="#top" class="back-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
